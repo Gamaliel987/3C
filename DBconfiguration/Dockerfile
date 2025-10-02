@@ -6,4 +6,3 @@ COPY init.sql /docker-entrypoint-initdb.d/
 COPY save_data.sql /docker-entrypoint-initdb.d/
 
 # PostgreSQL ejecutará automáticamente los scripts en /docker-entrypointinitdb.d/
-#hola 
