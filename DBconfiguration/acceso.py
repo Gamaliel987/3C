@@ -19,8 +19,8 @@ def conectar_db():
         return conn
     except Exception as e:
         print(e)
- #print("Error de conexión a la base de datos:", e)
-    return None
+        #print("Error de conexión a la base de datos:", e)
+        return None
 
 def obtener_datos_usuario(username, password):
     # """Consulta la base de datos para obtener los datos de un usuario a 
@@ -28,11 +28,10 @@ def obtener_datos_usuario(username, password):
     conn = conectar_db()
     if not conn:
         17
-    return
+        return
     try:
         cursor = conn.cursor()
-        # Verificar si el usuario y contraseña existen en la tabla 
-        credenciales
+        # Verificar si el usuario y contraseña existen en la tabla credenciales
         query = """
             SELECT u.id_usuario, u.nombre, u.correo, u.telefono, 
             u.fecha_nacimiento
@@ -55,12 +54,12 @@ def obtener_datos_usuario(username, password):
             conn.close()
     except Exception as e:
         print("Error al consultar la base de datos:", e)
-        if __name__ == "__main__":
-            print("Inicio de sesión en la base de datos")
- 
-        # Solicitar credenciales al usuario
-            username = input("Ingrese su usuario: ")
-            password = getpass.getpass("Ingrese su contraseña: ") # No muestra la contraseña al escribir
-            18
-        # Consultar la base de datos
-            obtener_datos_usuario(username, password)
+if __name__ == "__main__":
+    print("Inicio de sesión en la base de datos")
+
+    # Solicitar credenciales al usuario
+    username = input("Ingrese su usuario: ")
+    password = getpass.getpass("Ingrese su contraseña: ") # No muestra la contraseña al escribir 18
+
+    # Consultar la base de datos
+    obtener_datos_usuario(username, password)
